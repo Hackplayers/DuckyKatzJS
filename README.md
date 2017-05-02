@@ -10,16 +10,16 @@
   
   > apt-get install dfu-programmer
   
-* Luego descargaremso ducky-flasher y los descomprimiremos con los siguiente comandos:
+* Luego descargaremos ducky-flasher y los descomprimiremos con los siguiente comandos:
 
-  >wget https://github.com/hak5darren/USB-Rubber-Ducky/raw/master/Flash/ducky-flasher1.0.zip                  
-  >unzip ducky-flasher1.0.zip
+  > wget https://github.com/hak5darren/USB-Rubber-Ducky/raw/master/Flash/ducky-flasher1.0.zip                  
+  > unzip ducky-flasher1.0.zip
   
 * Ahora instalaremos la herramienta y la ejecutaremos:
 
-  >cd ducky-flasher                                                                                            
-  >sudo python setup.py                                                                                                             
-  >sudo ducky-flasher
+  > cd ducky-flasher                                                                                            
+  > sudo python setup.py                                                                                                             
+  > sudo ducky-flasher
 
 * A continuación deberemos conectar el Rubber Ducky en modo DFU, para ello lo insertaremos en la ranura USB a la vez que mantenemos pulsado el boton que tiene en la parte superior.
 
