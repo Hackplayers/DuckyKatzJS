@@ -11,7 +11,7 @@ CTRL-SHIFT ENTER
 DELAY 1000
 ALT y
 DELAY 3000
-REM A continuación vamos a ejecutar un bucler que recorra todas las letras de los volumenes
+REM A continuación vamos a ejecutar un bucle que recorra todas las letras de los volumenes
 REM de las memorias hasta que pueda ejecutar katz.js
 STRING for %d in (A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z) do %d: && cscript .\katz.js
 ENTER
