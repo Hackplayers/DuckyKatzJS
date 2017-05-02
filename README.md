@@ -1,4 +1,4 @@
-# Payloads de USB Rubber Ducky usando katz.js de subTee
+# DuckyKatzJS - Payloads de USB Rubber Ducky usando katz.js de subTee
 
 **duckykatz2gmail:** Este payload se encargará de descargar mediante powershell el JScript katz.js de subTee (https://gist.githubusercontent.com/subTee/b30e0bcc7645c790fcd993cfd0ad622f/raw/2adcc9d2570b4367c6cc405e5a5969863d04fc9b/katz.js), ejecutarlo y enviarnos a través de Gmail el archivo .log con la información de Mimikatz.
 
