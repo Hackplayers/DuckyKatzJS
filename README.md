@@ -4,7 +4,7 @@
 
 **duckykatz2txtoffline:** Este payload se encargará de ejecutar el JScript katz.js de subTee que se encuentra en la memoria SD de nuestro Rubber Ducky, el payload iniciará un bucle hasta encontrar el volumen de la memoria que contenga el "katz.js" que nosotros hemos introducido anteriormente, lo ejecutará y guardará la información extraida en un archivo TXT dentro de la memoria SD. **Para usar este payload se necesita tener la versión Twin Ducky Firmware flasheada en el Rubber Ducky.**
 
-## Como flashear el Rubber Ducky a Twin Ducky Firmware
+## Como flashear Rubber Ducky a Twin Ducky Firmware
 
 * Primero lo que necesitaremos es una terminal de Linux para ejecutar el siguiente comando:
   
