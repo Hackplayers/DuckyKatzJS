@@ -21,6 +21,6 @@
   > sudo python setup.py                                                                                                             
   > sudo ducky-flasher
 
-* A continuación deberemos conectar el Rubber Ducky en modo DFU, para ello lo insertaremos en la ranura USB a la vez que mantenemos pulsado el boton que tiene en la parte superior.
+* A continuación deberemos conectar el Rubber Ducky en modo DFU, para ello lo insertaremos en el puerto USB a la vez que mantenemos pulsado el boton que tiene en la parte superior.
 
 * Cuando lo hayamos conectado, en el programa elegimos la opción "Twin Duck" presionando el número 4, luego elegimos la versión original presionando el número 1 y esperamos a que el programa acabe de flashear nuestro Rubber Ducky.
