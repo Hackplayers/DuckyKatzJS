@@ -20,7 +20,7 @@ ENTER
 DELAY 1000
 STRING cscript.exe .\katz.js
 ENTER
-REM Ahora hay que tener cuidado a la hora de poner el proximo delay debido a que
+REM Ahora hay que tener cuidado a la hora de poner los proximos delays debido a que
 REM el JScript tardará más o menos dependiendo de lo que tarde en procesarlo el ordenador
 DELAY 10000
 DELAY 10000
